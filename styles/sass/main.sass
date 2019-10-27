@@ -2,3 +2,90 @@
 @import "most"
 @import "offer"
 @import "anim"
+
+// ======================================>
+// header
+// <======================================
+.header
+  position: absolute
+  top: 0
+  width: 100%
+  left: 0
+  height: 0.5rem
+  display: flex
+  align-items: center
+  padding-left: 0.5rem
+  box-sizing: border-box
+.f-screen
+  max-width: 1600px
+  margin: auto
+  padding: .15rem
+  min-height: 100vh
+  position: relative
+
+.f-screen__item
+  position: absolute
+  opacity: 0
+  animation: show .4s forwards
+  img
+    width: 100%
+.f-screen__item--cart
+  max-width: 808px
+  width: 42vw
+  top: 7vw
+  @media (min-width: 1920px)
+    top: 134.4px
+
+.f-screen__item--mac
+  max-width: 1050px
+  width: 55vw
+  left: 10vw
+  top: 0
+.f-screen__item--screen
+  max-width: 388px
+  width: 20vw
+  top: 1vw
+  left: 35vw
+  @media (min-width: 1920px)
+    left: 672px
+    top: 20px
+.f-screen__item--closenote
+  left: 47vw
+  top: 3vw
+  width: 37.3vw
+  @media (min-width: 1920px)
+    left: 902.4px
+    top: 57.6px
+    width: 717px
+.f-screen__item--ipad
+  width: 26vw
+  max-width: 500px
+  top: 30vw
+  left: 10vw
+  @media (min-width: 1920px)
+    top: 576px
+    left: 192px
+.f-screen__item--cart-b
+  width: 45vw
+  max-width: 870px
+  top: 25vw
+  left: 43vw
+  @media (min-width: 1920px)
+    top: 480px
+    left: 825.6px
+.f-screen__item--cart-bot
+  width: 45vw
+  max-width: 870px
+  top: 36vw
+  left: 10vw
+  @media (min-width: 1920px)
+    top: 691px
+    left: 192px
+
+@keyframes show
+  from
+    opacity: 0
+    transform: translateY(-5%)
+  to
+    opacity: 1
+    transform: translateY(0)

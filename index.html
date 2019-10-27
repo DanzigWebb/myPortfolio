@@ -20,8 +20,33 @@
 </head>
 
 <body>
-	
-
+	<header class="header">
+		<div class="header__logo"><span>M</span></div>
+	</header>
+	<div class="f-screen">
+		
+		<div class="f-screen__item f-screen__item--cart">
+			<img src="img/cart.png" alt="">
+		</div>
+		<div class="f-screen__item f-screen__item--mac">
+			<img src="img/macbook.png" alt="">
+		</div>
+		<div class="f-screen__item f-screen__item--screen">
+			<img src="img/screen.png" alt="">
+		</div>
+		<div class="f-screen__item f-screen__item--closenote">
+			<img src="img/close_note.png" alt="">
+		</div>
+		<div class="f-screen__item f-screen__item--ipad">
+			<img src="img/ipad.png" alt="">
+		</div>
+		<div class="f-screen__item f-screen__item--cart-b">
+			<img src="img/cart-b.png" alt="">
+		</div>
+		<div class="f-screen__item f-screen__item--cart-bot">
+			<img src="img/cart-bot.png" alt="">
+		</div>
+	</div>
 
 	<script src="libs/swiper/swiper.min.js"></script>
 	<script src="js/common.js"></script>
@@ -50,19 +75,6 @@
 				}
 			}, false);
 		}
-	</script>
-	<script>
-		(function () {
-			var input = document.querySelector('input[name="name"]');
-			input.addEventListener('input', function () {
-				input.value = input.value.replace(/[0-9]/g, '')
-			})
-		})()
-		var offer = document.getElementById('offer');
-		var btn = document.querySelector('.pulse__btn');
-		window.addEventListener('scroll', (e) => {
-			document.documentElement.scrollTop + 300 > offer.offsetTop ? btn.classList.add('show') : btn.classList.remove('show')
-		})
 	</script>
 </body>
 

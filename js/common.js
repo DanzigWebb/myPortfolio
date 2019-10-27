@@ -1,13 +1,8 @@
-var swiper = new Swiper('.swiper-container', {
-  pagination: {
-    el: '.swiper-pagination',
-    type: 'fraction',
-  },
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-  autoHeight: true,
-  spaceBetween: 40
-});
-console.log('made by https://github.com/DanzigWebb')
+(function(){
+  let screenItem = document.querySelectorAll('.f-screen__item');
+  let count = 0.5;
+  screenItem.forEach(item => {
+    item.style.animationDelay = count + 's'
+    count+= 0.2
+  })
+})()
