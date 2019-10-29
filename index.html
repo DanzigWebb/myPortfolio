@@ -21,7 +21,7 @@
 
 <body>
 	<header class="header">
-		<div class="header__logo"><span>M</span></div>
+		<div class="header__logo"><a href="#down"><span>M</span></a></div>
 	</header>
 	<div class="f-screen">
 		
@@ -51,31 +51,6 @@
 	<script src="libs/swiper/swiper.min.js"></script>
 	<script src="js/common.js"></script>
 
-	<script>
-		var linkNav = document.querySelectorAll('[href^="#"]'),
-			V = .2;
-		for (var i = 0; i < linkNav.length; i++) {
-			linkNav[i].addEventListener('click', function (e) {
-				e.preventDefault();
-				var w = window.pageYOffset,
-					hash = this.href.replace(/[^#]*(.*)/, '$1');
-				t = document.querySelector(hash).getBoundingClientRect().top,
-					start = null;
-				requestAnimationFrame(step);
-				function step(time) {
-					if (start === null) start = time;
-					var progress = time - start,
-						r = (t < 0 ? Math.max(w - progress / V, w + t) : Math.min(w + progress / V, w + t));
-					window.scrollTo(0, r);
-					if (r != w + t) {
-						requestAnimationFrame(step)
-					} else {
-						location.hash = hash
-					}
-				}
-			}, false);
-		}
-	</script>
 </body>
 
 </html>
