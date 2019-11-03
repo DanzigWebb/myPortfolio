@@ -32,7 +32,7 @@
   position: relative
   margin-bottom: 60px
   @media (max-width: 576px)
-    margin-top: 60px
+    margin-top: 90px
     margin-bottom: 0
 .f-screen__item
   position: absolute
@@ -104,6 +104,9 @@
 // ======================================>
 // about
 // <======================================
+.about__item
+  padding-top: 20px
+  padding-bottom: 20px
 .about-bg
   background-image: url(../../img/about_bg.png)
   background-size: cover
@@ -142,6 +145,7 @@
     &:nth-child(5)
       grid-column: col 9/span 2
       grid-row: row 8/span 2
+      animation: none
     &:nth-child(6)
       grid-column: col 3/span 7
       grid-row: row 8/span 6
@@ -184,3 +188,23 @@
     transform: translateX(-5%)
   100%
     transform: translateX(0)
+
+// ======================================>
+// builets
+// <======================================
+.builets__content
+  padding: 20px 0
+  box-shadow: 0 15px 44px 0 rgba(0,0,0,.05)
+.builets__item
+  text-align: center
+  box-sizing: border-box
+  @media (max-width: 576px)
+    margin-bottom: 20px
+  img
+    @media (max-width: 576px)
+      width: 50%
+.builets__title
+  font-size: 20px
+  font-weight: bold
+  line-height: 1
+  margin-bottom: 10px
