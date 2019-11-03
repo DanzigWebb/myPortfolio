@@ -1,12 +1,18 @@
 // animation for first screen
-
+console.log(document.querySelector('.f-screen').scrollHeight);
 (function () {
-  let screenItem = document.querySelectorAll('.f-screen__item');
+  const mainScreen = document.querySelector('.f-screen')
+  const screenItem = document.querySelectorAll('.f-screen__item');
   let count = 0.5;
-  screenItem.forEach(item => {
-    item.style.animationDelay = count + 's'
-    count += 0.2
-  })
+  window.onload = function () {
+    mainScreen.style.height = mainScreen.scrollHeight + 'px';
+    console.log(mainScreen.scrollHeight);
+    
+    screenItem.forEach(item => {
+      item.style.animationDelay = count + 's'
+      count += 0.2
+    })
+  }
 })();
 // fixed header
 (function () {
@@ -42,3 +48,11 @@
     }, false);
   }
 })();
+
+
+let imgs = document.querySelectorAll('.about-bg__content img')
+let count = 0
+imgs.forEach(img=> {
+  img.style.animationDelay = count + 's'
+  count += 0.6
+})
